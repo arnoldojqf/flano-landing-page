@@ -13,6 +13,14 @@
     background-size: 250px;
     @include flexbox;
 
+    &__title {
+      font-size: 2.4rem;
+      width: 80%;
+      /*max-width: 400px;*/
+      margin-bottom: 75px;
+      text-align: center;
+    }
+
     // Stats section
     .stats-section {
       width: 80%;
@@ -396,9 +404,10 @@
 
     &__title {
       font-size: 2.4rem;
-      width: 80%;
+      width: 100%;
       max-width: 400px;
       margin-bottom: 75px;
+      text-align: center;
     }
 
     .eEpjci {
@@ -434,7 +443,9 @@
         .gNFVfp {
           -webkit-box-align: center;
           align-items: center;
-          background-color: rgb(215, 39, 40);
+          /*background-color: rgb(215, 39, 40);*/
+          transform: scale(0.95);
+          background-color: lighten($btn-bg-color, 10%);
           border-radius: 24px;
           box-shadow: rgb(74 74 104 / 10%) 0px 2px 2px -1px inset;
           cursor: pointer;
@@ -511,7 +522,8 @@
       }
 
       .hInfnb {
-        background-color: rgb(215, 39, 40);
+        /*background-color: rgb(215, 39, 40);*/
+        background-color: lighten($btn-bg-color, 10%);
         border-radius: 16px;
         display: inline-flex;
 
@@ -519,6 +531,7 @@
           -webkit-box-align: center;
           align-items: center;
           background-color: rgb(255, 255, 255);
+          
           border: 0px;
           border-radius: 16px;
           box-shadow: none;
@@ -843,19 +856,26 @@
                 justify-content: space-between;
                 flex-direction: column;
 
-                .SORAz:disabled,
-                .SORAz.button--disabled {
-                  background-color: rgb(215, 39, 40);
-                  border-color: rgb(215, 39, 40);
+                .SORAz:disabled, .SORAz.button--disabled {
+                  /*background-color: rgb(215, 39, 40);
+                  border-color: rgb(215, 39, 40);*/
                   box-shadow: none;
-                  color: rgb(255, 255, 241);
+                  /*color: rgb(255, 255, 241);*/
                   cursor: not-allowed;
+
+                  &:hover {
+                    background-color: lighten($btn-bg-color, 10%);
+                  }
+                  &:active {
+                    transform: scale(0.95);
+                    background-color: darken($btn-bg-color, 30%);
+                  }
                 }
 
                 .SORAz {
                   -webkit-box-align: center;
                   align-items: center;
-                  background-color: rgb(215, 39, 39);
+                  /*background-color: rgb(215, 39, 39);*/
                   border: 0px;
                   border-radius: 16px;
                   box-shadow: rgb(14 14 44 / 40%) 0px -1px 0px inset;
@@ -875,6 +895,10 @@
                   padding: 0px 24px;
                   transition: background-color 0.2s ease 0s;
                   opacity: 1;
+
+                  &:hover {
+                    background-color: lighten($btn-bg-color, 10%);
+                  }
                 }
 
                 * {
@@ -905,19 +929,26 @@
               justify-content: space-between;
               flex-direction: column;
 
-              .SORAz:disabled,
-              .SORAz.button--disabled {
-                background-color: rgb(215, 39, 40);
-                border-color: rgb(215, 39, 40);
+              .SORAz:disabled, .SORAz.button--disabled {
+                /*background-color: rgb(215, 39, 40);
+                border-color: rgb(215, 39, 40);*/
                 box-shadow: none;
-                color: rgb(255, 255, 241);
+                /*color: rgb(255, 255, 241);*/
                 cursor: not-allowed;
+
+                &:hover {
+                  background-color: lighten($btn-bg-color, 10%);
+                }
+                &:active {
+                  transform: scale(0.95);
+                  background-color: darken($btn-bg-color, 30%);
+                }
               }
 
               .SORAz {
                 -webkit-box-align: center;
                 align-items: center;
-                background-color: rgb(215, 39, 39);
+                background-color: darken($btn-bg-color, 30%);
                 border: 0px;
                 border-radius: 16px;
                 box-shadow: rgb(14 14 44 / 40%) 0px -1px 0px inset;
@@ -937,6 +968,10 @@
                 padding: 0px 24px;
                 transition: background-color 0.2s ease 0s;
                 opacity: 1;
+
+                &:hover {
+                  background-color: lighten($btn-bg-color, 10%);
+                }
               }
 
               * {
@@ -955,11 +990,13 @@
           .cqenlq {
             -webkit-box-align: center;
             align-items: center;
-            background-color: rgb(215, 39, 39);
+            /*background-color: rgb(215, 39, 39);*/
             border: 0px;
             border-radius: 16px;
             box-shadow: rgb(14 14 44 / 40%) 0px -1px 0px inset;
             color: rgb(255, 255, 255);
+            transform: scale(0.95);
+              background-color: darken($btn-bg-color, 30%);
             cursor: pointer;
             display: inline-flex;
             font-family: inherit;
@@ -976,6 +1013,11 @@
             transition: background-color 0.2s ease 0s;
             opacity: 1;
             margin-top: 8px;
+
+            &:hover {
+              background-color: lighten($btn-bg-color, 10%);
+            }
+            
           }
 
           * {

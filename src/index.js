@@ -1,6 +1,28 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import React from 'react';
+import { ReactDOM } from 'react-dom';
+import { Button, Flex, useWalletModal } from '@pancakeswap/uikit'
+
+const { onPresentConnectModal } = useWalletModal(
+  () => null,
+  () => null,
+  "0xbdda50183d817c3289f895a4472eb475967dc980"
+);
+
+console.log('onPresentConnectModal', onPresentConnectModal);
+
+const domContainer = document.querySelector('#unlock_wallet');
+
+const myelement = (
+  <Flex>
+    <Button onClick={onPresentConnectModal}>Open connect modal</Button>
+  </Flex>
+);
+
+ReactDOM.render(myelement, domContainer);
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 

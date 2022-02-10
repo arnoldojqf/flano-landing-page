@@ -225,6 +225,13 @@
   justify-content: center;
   align-items: center;
 }
+.main-content .why-us-wrapper__title {
+  font-size: 2.4rem;
+  width: 80%;
+  /*max-width: 400px;*/
+  margin-bottom: 75px;
+  text-align: center;
+}
 .main-content .why-us-wrapper .stats-section {
   width: 80%;
   display: flex;
@@ -596,9 +603,10 @@
 }
 .main-content .pools-section__title {
   font-size: 2.4rem;
-  width: 80%;
+  width: 100%;
   max-width: 400px;
   margin-bottom: 75px;
+  text-align: center;
 }
 .main-content .pools-section .eEpjci {
   margin-left: auto;
@@ -631,7 +639,9 @@
 .main-content .pools-section .irmCui .erAkNO .gNFVfp {
   -webkit-box-align: center;
   align-items: center;
-  background-color: #d72728;
+  /*background-color: rgb(215, 39, 40);*/
+  transform: scale(0.95);
+  background-color: #6491ee;
   border-radius: 24px;
   box-shadow: rgba(74, 74, 104, 0.1) 0px 2px 2px -1px inset;
   cursor: pointer;
@@ -700,7 +710,8 @@
   margin-left: 4px;
 }
 .main-content .pools-section .irmCui .hInfnb {
-  background-color: #d72728;
+  /*background-color: rgb(215, 39, 40);*/
+  background-color: #6491ee;
   border-radius: 16px;
   display: inline-flex;
 }
@@ -996,18 +1007,24 @@
   justify-content: space-between;
   flex-direction: column;
 }
-.main-content .pools-section .dXiuJH .gFDmFJ .jLeSfx .kDFQxZ .hFHseq .dpehyt .SORAz:disabled,
-.main-content .pools-section .dXiuJH .gFDmFJ .jLeSfx .kDFQxZ .hFHseq .dpehyt .SORAz.button--disabled {
-  background-color: #d72728;
-  border-color: #d72728;
+.main-content .pools-section .dXiuJH .gFDmFJ .jLeSfx .kDFQxZ .hFHseq .dpehyt .SORAz:disabled, .main-content .pools-section .dXiuJH .gFDmFJ .jLeSfx .kDFQxZ .hFHseq .dpehyt .SORAz.button--disabled {
+  /*background-color: rgb(215, 39, 40);
+  border-color: rgb(215, 39, 40);*/
   box-shadow: none;
-  color: #fffff1;
+  /*color: rgb(255, 255, 241);*/
   cursor: not-allowed;
+}
+.main-content .pools-section .dXiuJH .gFDmFJ .jLeSfx .kDFQxZ .hFHseq .dpehyt .SORAz:disabled:hover, .main-content .pools-section .dXiuJH .gFDmFJ .jLeSfx .kDFQxZ .hFHseq .dpehyt .SORAz.button--disabled:hover {
+  background-color: #6491ee;
+}
+.main-content .pools-section .dXiuJH .gFDmFJ .jLeSfx .kDFQxZ .hFHseq .dpehyt .SORAz:disabled:active, .main-content .pools-section .dXiuJH .gFDmFJ .jLeSfx .kDFQxZ .hFHseq .dpehyt .SORAz.button--disabled:active {
+  transform: scale(0.95);
+  background-color: #0d3179;
 }
 .main-content .pools-section .dXiuJH .gFDmFJ .jLeSfx .kDFQxZ .hFHseq .dpehyt .SORAz {
   -webkit-box-align: center;
   align-items: center;
-  background-color: #d72727;
+  /*background-color: rgb(215, 39, 39);*/
   border: 0px;
   border-radius: 16px;
   box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px inset;
@@ -1027,6 +1044,9 @@
   padding: 0px 24px;
   transition: background-color 0.2s ease 0s;
   opacity: 1;
+}
+.main-content .pools-section .dXiuJH .gFDmFJ .jLeSfx .kDFQxZ .hFHseq .dpehyt .SORAz:hover {
+  background-color: #6491ee;
 }
 .main-content .pools-section .dXiuJH .gFDmFJ .jLeSfx .kDFQxZ .hFHseq .dpehyt * {
   font-family: Kanit, sans-serif;
@@ -1051,18 +1071,24 @@
   justify-content: space-between;
   flex-direction: column;
 }
-.main-content .pools-section .dXiuJH .gFDmFJ .jLeSfx .kDFQxZ .dpehyt .SORAz:disabled,
-.main-content .pools-section .dXiuJH .gFDmFJ .jLeSfx .kDFQxZ .dpehyt .SORAz.button--disabled {
-  background-color: #d72728;
-  border-color: #d72728;
+.main-content .pools-section .dXiuJH .gFDmFJ .jLeSfx .kDFQxZ .dpehyt .SORAz:disabled, .main-content .pools-section .dXiuJH .gFDmFJ .jLeSfx .kDFQxZ .dpehyt .SORAz.button--disabled {
+  /*background-color: rgb(215, 39, 40);
+  border-color: rgb(215, 39, 40);*/
   box-shadow: none;
-  color: #fffff1;
+  /*color: rgb(255, 255, 241);*/
   cursor: not-allowed;
+}
+.main-content .pools-section .dXiuJH .gFDmFJ .jLeSfx .kDFQxZ .dpehyt .SORAz:disabled:hover, .main-content .pools-section .dXiuJH .gFDmFJ .jLeSfx .kDFQxZ .dpehyt .SORAz.button--disabled:hover {
+  background-color: #6491ee;
+}
+.main-content .pools-section .dXiuJH .gFDmFJ .jLeSfx .kDFQxZ .dpehyt .SORAz:disabled:active, .main-content .pools-section .dXiuJH .gFDmFJ .jLeSfx .kDFQxZ .dpehyt .SORAz.button--disabled:active {
+  transform: scale(0.95);
+  background-color: #0d3179;
 }
 .main-content .pools-section .dXiuJH .gFDmFJ .jLeSfx .kDFQxZ .dpehyt .SORAz {
   -webkit-box-align: center;
   align-items: center;
-  background-color: #d72727;
+  background-color: #0d3179;
   border: 0px;
   border-radius: 16px;
   box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px inset;
@@ -1083,6 +1109,9 @@
   transition: background-color 0.2s ease 0s;
   opacity: 1;
 }
+.main-content .pools-section .dXiuJH .gFDmFJ .jLeSfx .kDFQxZ .dpehyt .SORAz:hover {
+  background-color: #6491ee;
+}
 .main-content .pools-section .dXiuJH .gFDmFJ .jLeSfx .kDFQxZ .dpehyt * {
   font-family: Kanit, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -1095,11 +1124,13 @@
 .main-content .pools-section .dXiuJH .gFDmFJ .jLeSfx .cqenlq {
   -webkit-box-align: center;
   align-items: center;
-  background-color: #d72727;
+  /*background-color: rgb(215, 39, 39);*/
   border: 0px;
   border-radius: 16px;
   box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px inset;
   color: white;
+  transform: scale(0.95);
+  background-color: #0d3179;
   cursor: pointer;
   display: inline-flex;
   font-family: inherit;
@@ -1116,6 +1147,9 @@
   transition: background-color 0.2s ease 0s;
   opacity: 1;
   margin-top: 8px;
+}
+.main-content .pools-section .dXiuJH .gFDmFJ .jLeSfx .cqenlq:hover {
+  background-color: #6491ee;
 }
 .main-content .pools-section .dXiuJH .gFDmFJ .jLeSfx * {
   font-family: Kanit, sans-serif;
