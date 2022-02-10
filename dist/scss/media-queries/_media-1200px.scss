@@ -101,6 +101,20 @@
       }
     }
 
+    // Pools section
+    .pools-section {
+      flex-flow: column nowrap;
+      &__title {
+        font-size: 3.5rem;
+        max-width: 700px;
+      }
+
+      .jnExUa {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+    }
+
     // Features section
     .features-section {
       flex-flow: column nowrap;

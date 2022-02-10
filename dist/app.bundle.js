@@ -1,0 +1,1 @@
+window.addEventListener("scroll",(()=>{document.querySelector(".main-header__navbar").classList.toggle("active",window.scrollY>0)}));

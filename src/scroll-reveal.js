@@ -1,6 +1,7 @@
 // *******************************
 //      ScrollReveal animations
 // *******************************
+import ScrollReveal from 'scrollreveal'
 
 // -----  Main header -----
 ScrollReveal().reveal(".main-header-navbar", {

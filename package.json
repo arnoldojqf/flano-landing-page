@@ -1,0 +1,31 @@
+{
+  "name": "flano-landing-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "deploy": "ftp-deploy --server ftp.bnbhost.com.br --username flanotoken@flanotoken.com --password \"MWpZar2Yv5Qr6Fa\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "firebase": "^9.6.6",
+    "scrollreveal": "^4.0.9"
+  },
+  "devDependencies": {
+    "@samkirkland/ftp-deploy": "^1.2.1",
+    "css-loader": "^6.6.0",
+    "jquery-roadmap": "^1.4.0",
+    "mini-css-extract-plugin": "^2.5.3",
+    "node-sass": "^7.0.1",
+    "sass": "^1.49.7",
+    "sass-loader": "^12.4.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.68.0",
+    "webpack-cli": "^4.9.2"
+  }
+}
