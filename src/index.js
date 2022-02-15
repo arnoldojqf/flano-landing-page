@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import React from 'react';
+/*import React from 'react';
 import { ReactDOM } from 'react-dom';
 import { Button, Flex, useWalletModal } from '@pancakeswap/uikit'
 
@@ -21,7 +21,7 @@ const myelement = (
   </Flex>
 );
 
-ReactDOM.render(myelement, domContainer);
+ReactDOM.render(myelement, domContainer);*/
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries

@@ -1,10 +1,17 @@
 const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+//const isProduction = argv.mode === "production";
+const isProduction = true;
+const isDevelopment = !isProduction;
 
-module.exports = {
+module.exports = {  
+  devtool: isDevelopment && "cheap-module-source-map",
   entry: {
     index: './src/index.js',
     scroll: './src/scroll-reveal.js',
-    app: './src/app.js'
+    app: './src/app.js',
+    menu: './src/menu.jsx',
+    example: './src/example.less'
   },
   output: {
     filename: '[name].bundle.js',
@@ -13,15 +20,29 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.m?js$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options: {
-            presets: ['@babel/preset-env']
+            cacheDirectory: true,
+            cacheCompression: false,
+            envName: isProduction ? "production" : "development"
           }
         }
-      }
-    ],
+      },
+      { 
+        test: /\.less$/, // .less and .css
+        use: [ 
+            'style-loader', 
+            'css-loader', 
+            'less-loader'
+        ],
+      },
+    ]
   },
+  plugins: isProduction ? [new MiniCssExtractPlugin()] : [],
+  resolve: {
+    extensions: [".js", ".jsx"]
+    },
 };
