@@ -48,7 +48,7 @@ class Demo extends Component {
     super(props);
     this.state = {
       currentMenu: 'slide',
-      side: 'right'
+      side: 'left'
     };
   }
 
@@ -66,29 +66,29 @@ class Demo extends Component {
     switch (this.props.menus[this.state.currentMenu].items) {
       case 1:
         items = [
-          <a key="0" href="">
+          <a key="0" href="#howtobuy">
             <i className="fa fa-fw fa-star-o" />
-            <span>Favorites</span>
+            <span>Trade</span>
           </a>,
-          <a key="1" href="">
+          <a key="1" href="#farms">
             <i className="fa fa-fw fa-bell-o" />
-            <span>Alerts</span>
+            <span>Farms</span>
           </a>,
-          <a key="2" href="">
+          <a key="2" href="#pools">
             <i className="fa fa-fw fa-envelope-o" />
-            <span>Messages</span>
+            <span>Pools</span>
           </a>,
-          <a key="3" href="">
+          <a key="3" href="#roadmap">
             <i className="fa fa-fw fa-comment-o" />
-            <span>Comments</span>
+            <span>Roadmap</span>
           </a>,
-          <a key="4" href="">
+          <a key="4" href="#tokenomics">
             <i className="fa fa-fw fa-bar-chart-o" />
-            <span>Analytics</span>
+            <span>Tokenomics</span>
           </a>,
-          <a key="5" href="">
+          <a key="5" href="#whitepaper">
             <i className="fa fa-fw fa-newspaper-o" />
-            <span>Reading List</span>
+            <span>Whitepaper</span>
           </a>
         ];
         break;
@@ -98,25 +98,29 @@ class Demo extends Component {
             <i className="fa fa-fw fa-inbox fa-2x" />
             <span>Sidebar</span>
           </h2>,
-          <a key="1" href="">
-            <i className="fa fa-fw fa-database" />
-            <span>Data Management</span>
+          <a key="1" href="#howtobuy">
+            <i className="fa fa-fw fa-star-o" />
+            <span>Trade</span>
           </a>,
-          <a key="2" href="">
-            <i className="fa fa-fw fa-map-marker" />
-            <span>Location</span>
+          <a key="2" href="#farms">
+            <i className="fa fa-fw fa-bell-o" />
+            <span>Farms</span>
           </a>,
-          <a key="3" href="">
-            <i className="fa fa-fw fa-mortar-board" />
-            <span>Study</span>
+          <a key="3" href="#pools">
+            <i className="fa fa-fw fa-envelope-o" />
+            <span>Pools</span>
           </a>,
-          <a key="4" href="">
-            <i className="fa fa-fw fa-picture-o" />
-            <span>Collections</span>
+          <a key="4" href="#roadmap">
+            <i className="fa fa-fw fa-comment-o" />
+            <span>Roadmap</span>
           </a>,
-          <a key="5" href="">
-            <i className="fa fa-fw fa-money" />
-            <span>Credits</span>
+          <a key="5" href="#tokenomics">
+            <i className="fa fa-fw fa-bar-chart-o" />
+            <span>Tokenomics</span>
+          </a>,
+          <a key="6" href="#whitepaper">
+            <i className="fa fa-fw fa-newspaper-o" />
+            <span>Whitepaper</span>
           </a>
         ];
     }
@@ -132,7 +136,7 @@ class Demo extends Component {
         <Menu
           id={this.state.currentMenu}
           pageWrapId={'main-content'}
-          
+
           right={this.state.side === 'right'}
         >
           {this.getItems()}
@@ -157,10 +161,10 @@ class Demo extends Component {
     });
 
     return (
-      
-        this.getMenu()
-        
-      
+
+      this.getMenu()
+
+
     );
   }
 }
