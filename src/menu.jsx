@@ -66,29 +66,33 @@ class Demo extends Component {
     switch (this.props.menus[this.state.currentMenu].items) {
       case 1:
         items = [
-          <a key="0" href="#howtobuy">
-            <i className="fa fa-fw fa-star-o" />
-            <span>Trade</span>
-          </a>,
-          <a key="1" href="#farms">
-            <i className="fa fa-fw fa-bell-o" />
-            <span>Farms</span>
+          <a key="1" href="#">
+            <i className="fa fa-fw fa-envelope-o" />
+            <span>Home</span>
           </a>,
           <a key="2" href="#pools">
             <i className="fa fa-fw fa-envelope-o" />
             <span>Pools</span>
           </a>,
-          <a key="3" href="#roadmap">
-            <i className="fa fa-fw fa-comment-o" />
-            <span>Roadmap</span>
+          <a key="3" href="#farms">
+            <i className="fa fa-fw fa-bell-o" />
+            <span>Farms</span>
           </a>,
-          <a key="4" href="#tokenomics">
+          <a key="4" href="#howtobuy">
+            <i className="fa fa-fw fa-star-o" />
+            <span>Trade</span>
+          </a>,
+          <a key="5" href="#tokenomics">
             <i className="fa fa-fw fa-bar-chart-o" />
             <span>Tokenomics</span>
           </a>,
-          <a key="5" href="#whitepaper">
+          <a key="6" href="#whitepaper">
             <i className="fa fa-fw fa-newspaper-o" />
             <span>Whitepaper</span>
+          </a>,
+          <a key="7" href="#roadmap">
+            <i className="fa fa-fw fa-comment-o" />
+            <span>Roadmap</span>
           </a>
         ];
         break;
@@ -98,29 +102,29 @@ class Demo extends Component {
             <i className="fa fa-fw fa-inbox fa-2x" />
             <span>Sidebar</span>
           </h2>,
-          <a key="1" href="#howtobuy">
-            <i className="fa fa-fw fa-star-o" />
-            <span>Trade</span>
+          <a key="1" href="#pools">
+            <i className="fa fa-fw fa-envelope-o" />
+            <span>Pools</span>
           </a>,
           <a key="2" href="#farms">
             <i className="fa fa-fw fa-bell-o" />
             <span>Farms</span>
           </a>,
-          <a key="3" href="#pools">
-            <i className="fa fa-fw fa-envelope-o" />
-            <span>Pools</span>
+          <a key="3" href="#howtobuy">
+            <i className="fa fa-fw fa-star-o" />
+            <span>Trade</span>
           </a>,
-          <a key="4" href="#roadmap">
-            <i className="fa fa-fw fa-comment-o" />
-            <span>Roadmap</span>
-          </a>,
-          <a key="5" href="#tokenomics">
+          <a key="4" href="#tokenomics">
             <i className="fa fa-fw fa-bar-chart-o" />
             <span>Tokenomics</span>
           </a>,
-          <a key="6" href="#whitepaper">
+          <a key="5" href="#whitepaper">
             <i className="fa fa-fw fa-newspaper-o" />
             <span>Whitepaper</span>
+          </a>,
+          <a key="6" href="#roadmap">
+            <i className="fa fa-fw fa-comment-o" />
+            <span>Roadmap</span>
           </a>
         ];
     }

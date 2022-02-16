@@ -1,0 +1,7 @@
+// --------  Media 992px  -------------
+
+@media only screen and (max-width: 992px) {
+  .roadmap.roadmap--orientation-auto .roadmap__events__event {
+    min-height: 200px!important;
+  }
+}

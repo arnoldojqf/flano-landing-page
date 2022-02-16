@@ -17,7 +17,7 @@
       font-size: 2.4rem;
       width: 80%;
       /*max-width: 400px;*/
-      margin-bottom: 75px;
+      margin: 50px auto 50px auto;
       text-align: center;
     }
 
@@ -1280,4 +1280,6 @@
       width: 100%;
     }
   }
+  .material-icons.md-36 { font-size: 36px; }
+  .material-icons.md-light { color: rgba(255, 255, 255, 1); }
 }
