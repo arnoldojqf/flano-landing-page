@@ -42,9 +42,39 @@
         }
       }
       &__register-btn {
-        @include button($width: 60%, $fnt-size: 1.3rem);
-        max-width: 140px;
+        -webkit-box-align: center;
+            align-items: center;
+            /*background-color: rgb(215, 39, 39);*/
+            border: 0px;
+            border-radius: 16px;
+            box-shadow: rgb(14 14 44 / 40%) 0px -1px 0px inset;
+            color: rgb(255, 255, 255);
+            transform: scale(0.95);
+              background-color: darken($btn-bg-color, 30%);
+            cursor: pointer;
+            display: inline-flex;
+            font-family: inherit;
+            font-size: 16px;
+            font-weight: 600;
+            width: 100%;
+            height: 48px;
+            line-height: 1;
+            letter-spacing: 0.03em;
+            -webkit-box-pack: center;
+            justify-content: center;
+            outline: 0px;
+            padding: 0px 24px;
+            transition: background-color 0.2s ease 0s;
+            opacity: 1;
+            margin-top: 8px;
 
+            &:hover {
+              background-color: lighten($btn-bg-color, 10%);
+            }
+        /*@include button($width: 60%, $fnt-size: 1.3rem);
+        max-width: 140px;
+        background-color: darken($btn-bg-color, 30%);
+        color: rgb(255, 255, 255);
         transition: all 0.3s ease-in;
 
         &:hover {
@@ -53,7 +83,7 @@
         &:active {
           transform: scale(0.95);
           background-color: darken($btn-bg-color, 30%);
-        }
+        }*/
       }
     }
     &__nav {

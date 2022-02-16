@@ -135,8 +135,8 @@ class Demo extends Component {
       <MenuWrap wait={20} side={this.state.side}>
         <Menu
           id={this.state.currentMenu}
-          pageWrapId={'main-content'}
-
+          pageWrapId={'page-wrap'}
+          outerContainerId={'outer-container'}
           right={this.state.side === 'right'}
         >
           {this.getItems()}
@@ -161,10 +161,11 @@ class Demo extends Component {
     });
 
     return (
-
-      this.getMenu()
-
-
+      <div id="outer-container" style={{ height: '100%' }}>
+        {this.getMenu()}
+        <main id="page-wrap">
+        </main>
+      </div>
     );
   }
 }

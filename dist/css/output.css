@@ -65,24 +65,47 @@
   color: #fbc17c;
 }
 .main-header-navbar__login__register-btn {
-  width: 60%;
-  padding: 9px 10px;
-  background-color: #3671e9;
-  color: #fff;
-  border-radius: 25px;
-  display: inline-block;
-  text-align: center;
-  text-decoration: none;
-  font-size: 1.3rem;
+  -webkit-box-align: center;
+  align-items: center;
+  /*background-color: rgb(215, 39, 39);*/
+  border: 0px;
+  border-radius: 16px;
+  box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px inset;
+  color: white;
+  transform: scale(0.95);
+  background-color: #0d3179;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  width: 100%;
+  height: 48px;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  -webkit-box-pack: center;
+  justify-content: center;
+  outline: 0px;
+  padding: 0px 24px;
+  transition: background-color 0.2s ease 0s;
+  opacity: 1;
+  margin-top: 8px;
+  /*@include button($width: 60%, $fnt-size: 1.3rem);
   max-width: 140px;
+  background-color: darken($btn-bg-color, 30%);
+  color: rgb(255, 255, 255);
   transition: all 0.3s ease-in;
+
+  &:hover {
+    background-color: lighten($btn-bg-color, 10%);
+  }
+  &:active {
+    transform: scale(0.95);
+    background-color: darken($btn-bg-color, 30%);
+  }*/
 }
 .main-header-navbar__login__register-btn:hover {
   background-color: #6491ee;
-}
-.main-header-navbar__login__register-btn:active {
-  transform: scale(0.95);
-  background-color: #0d3179;
 }
 .main-header-navbar__nav {
   margin-top: 15px;
