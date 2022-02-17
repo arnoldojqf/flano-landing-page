@@ -10,7 +10,7 @@
   .main-header {
     &-navbar {
       justify-content: space-between;
-
+      margin-bottom: 50px;
       &__nav {
         width: 40%;
         max-width: 290px;
@@ -25,7 +25,7 @@
 
     &-content-principal {
       width: 50%;
-      justify-content: flex-start;
+      justify-content: space-evenly;
       text-align: left;
 
       &__illustration {
@@ -246,17 +246,17 @@
       }
     }
 
-    .copy-and-social {
-      justify-content: space-between;
+    .copy-and-social {      
 
       &__copy {
         width: 200px;
         margin-bottom: 0;
+        justify-content: space-between; 
       }
 
       .social-icons {
         max-width: 200px;
-        justify-content: space-between;
+        justify-content: right;
       }
     }
   }

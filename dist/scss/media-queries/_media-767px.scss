@@ -1,0 +1,20 @@
+// --------  Media 767px  -------------
+
+@media only screen and (max-width: 767px) {  
+  .main-header {
+    &-navbar {
+      justify-content: space-between;
+      &__logo {
+        width:40%;
+        max-width: 80px;
+      }
+    }
+  }
+  .roadmap.roadmap--orientation-auto .roadmap__events__event {
+    min-height: 200px !important;
+  }
+
+  .roadmap.roadmap--orientation-auto.roadmap--initialized .roadmap__events .roadmap__events__event:after {
+    width: 22px !important;
+  }
+}

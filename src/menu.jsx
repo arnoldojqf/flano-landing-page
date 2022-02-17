@@ -11,6 +11,18 @@ class MenuWrap extends Component {
     };
   }
 
+  componentWillReceiveProps(nextProps) {
+    const sideChanged = this.props.children.props.right !== nextProps.children.props.right;
+
+    if (sideChanged) {
+      this.setState({hidden : true});
+
+      setTimeout(() => {
+        this.show();
+      }, this.props.wait);
+    }
+  }
+
   componentDidUpdate(prevProps) {
     const sideChanged =
       this.props.children.props.right !== prevProps.children.props.right;
@@ -48,7 +60,7 @@ class Demo extends Component {
     super(props);
     this.state = {
       currentMenu: 'slide',
-      side: 'left'
+      side: 'right'
     };
   }
 
@@ -72,7 +84,7 @@ class Demo extends Component {
           </a>,
           <a key="2" href="#pools">
             <i className="fa fa-fw fa-envelope-o" />
-            <span>Pools</span>
+            <span>Vault</span>
           </a>,
           <a key="3" href="#farms">
             <i className="fa fa-fw fa-bell-o" />
@@ -104,7 +116,7 @@ class Demo extends Component {
           </h2>,
           <a key="1" href="#pools">
             <i className="fa fa-fw fa-envelope-o" />
-            <span>Pools</span>
+            <span>Vault</span>
           </a>,
           <a key="2" href="#farms">
             <i className="fa fa-fw fa-bell-o" />
@@ -126,7 +138,7 @@ class Demo extends Component {
             <i className="fa fa-fw fa-comment-o" />
             <span>Roadmap</span>
           </a>
-        ];
+        ];        
     }
 
     return items;
@@ -135,18 +147,28 @@ class Demo extends Component {
   getMenu() {
     const Menu = BurgerMenu[this.state.currentMenu];
 
-    return (
-      <MenuWrap wait={20} side={this.state.side}>
-        <Menu
-          id={this.state.currentMenu}
-          pageWrapId={'page-wrap'}
-          outerContainerId={'outer-container'}
-          right={this.state.side === 'right'}
-        >
-          {this.getItems()}
-        </Menu>
-      </MenuWrap>
-    );
+    const items = this.getItems();
+    let jsx;
+
+    if (this.state.side === 'right') {
+      jsx = (
+        <MenuWrap wait={20} side={this.state.side}>
+          <Menu id={this.state.currentMenu} pageWrapId={'page-wrap'} outerContainerId={'outer-container'} right>
+            {items}
+          </Menu>
+        </MenuWrap>
+      );
+    } else {
+      jsx = (
+        <MenuWrap wait={20}>
+          <Menu id={this.state.currentMenu} pageWrapId={'page-wrap'} outerContainerId={'outer-container'} extension>
+            {items}
+          </Menu>
+        </MenuWrap>
+      );
+    }
+
+    return jsx;
   }
 
   render() {
@@ -165,10 +187,10 @@ class Demo extends Component {
     });
 
     return (
-      <div id="outer-container" style={{ height: '100%' }}>
+      <div id="outer-container" style={{height: '100%'}}>
         {this.getMenu()}
         <main id="page-wrap">
-        </main>
+          </main>
       </div>
     );
   }

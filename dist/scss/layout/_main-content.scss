@@ -531,7 +531,7 @@
           -webkit-box-align: center;
           align-items: center;
           background-color: rgb(255, 255, 255);
-          
+
           border: 0px;
           border-radius: 16px;
           box-shadow: none;
@@ -630,7 +630,7 @@
         .eQUdeu {
           svg {
             margin-right: 0.25rem;
-          }                    
+          }
         }
 
         .eOymEE {
@@ -856,7 +856,8 @@
                 justify-content: space-between;
                 flex-direction: column;
 
-                .SORAz:disabled, .SORAz.button--disabled {
+                .SORAz:disabled,
+                .SORAz.button--disabled {
                   /*background-color: rgb(215, 39, 40);
                   border-color: rgb(215, 39, 40);*/
                   box-shadow: none;
@@ -866,6 +867,7 @@
                   &:hover {
                     background-color: lighten($btn-bg-color, 10%);
                   }
+
                   &:active {
                     transform: scale(0.95);
                     background-color: darken($btn-bg-color, 30%);
@@ -929,7 +931,8 @@
               justify-content: space-between;
               flex-direction: column;
 
-              .SORAz:disabled, .SORAz.button--disabled {
+              .SORAz:disabled,
+              .SORAz.button--disabled {
                 /*background-color: rgb(215, 39, 40);
                 border-color: rgb(215, 39, 40);*/
                 box-shadow: none;
@@ -939,6 +942,7 @@
                 &:hover {
                   background-color: lighten($btn-bg-color, 10%);
                 }
+
                 &:active {
                   transform: scale(0.95);
                   background-color: darken($btn-bg-color, 30%);
@@ -996,7 +1000,7 @@
             box-shadow: rgb(14 14 44 / 40%) 0px -1px 0px inset;
             color: rgb(255, 255, 255);
             transform: scale(0.95);
-              background-color: darken($btn-bg-color, 30%);
+            background-color: darken($btn-bg-color, 30%);
             cursor: pointer;
             display: inline-flex;
             font-family: inherit;
@@ -1017,7 +1021,7 @@
             &:hover {
               background-color: lighten($btn-bg-color, 10%);
             }
-            
+
           }
 
           * {
@@ -1280,6 +1284,12 @@
       width: 100%;
     }
   }
-  .material-icons.md-36 { font-size: 36px; }
-  .material-icons.md-light { color: rgba(255, 255, 255, 1); }
+
+  .material-icons.md-36 {
+    font-size: 36px;
+  }
+
+  .material-icons.md-light {
+    color: rgba(255, 255, 255, 1);
+  }
 }

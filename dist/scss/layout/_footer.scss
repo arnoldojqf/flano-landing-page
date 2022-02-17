@@ -3,7 +3,7 @@
   width: 80%;
   margin-right: auto;
   margin-left: auto;
-  @include flexbox($flow: column nowrap);
+  @include flexbox($flow: row nowrap);
 }
 .main-footer {
   width: 100%;
@@ -23,7 +23,6 @@
     &__nav {
       width: 70%;
       list-style-type: none;
-      margin-bottom: 35px;
 
       &__title {
         font-size: 1.5rem;
@@ -95,7 +94,7 @@
     .social-icons {
       width: 100%;
       max-width: 400px;
-      @include flexbox($jtf: space-evenly);
+      @include flexbox($jtf: right);
       .fab {
         color: $footer-icon-color;
         font-size: 1.6rem;

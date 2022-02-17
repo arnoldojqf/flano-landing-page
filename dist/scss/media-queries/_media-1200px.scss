@@ -1,7 +1,7 @@
 // -----------  Media 1200px -----------------
 @media screen and (min-width: 1200px) {
   .main-container {
-    padding: 50px 0;
+    padding: 0;
   }
 
   // Main header styles
@@ -10,6 +10,7 @@
   }
   .main-header {
     &-navbar {
+      margin-bottom: 50px;
       &__login {
         &__register-btn {
           padding: 15px 10px;
@@ -17,6 +18,7 @@
       }
     }
     &-content-principal {
+      justify-content: space-evenly;
       &__title {
         font-size: 4rem;
         line-height: 50px;
@@ -177,5 +179,5 @@
         width: 80%;
       }
     }
-  }
+  } 
 }
