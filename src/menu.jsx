@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import ReactDOM from 'react-dom';
 import BurgerMenu from 'react-burger-menu';
 import classNames from 'classnames';
@@ -60,7 +60,8 @@ class Demo extends Component {
     super(props);
     this.state = {
       currentMenu: 'slide',
-      side: 'right'
+      side: 'left',
+      menuOpen: false
     };
   }
 
@@ -79,31 +80,31 @@ class Demo extends Component {
       case 1:
         items = [
           <a key="1" href="#">
-            <i className="fa fa-fw fa-envelope-o" />
+            <i className="fa fa-fw fa-envelope" />
             <span>Home</span>
           </a>,
           <a key="2" href="#pools">
-            <i className="fa fa-fw fa-envelope-o" />
+            <i className="fa fa-fw fa-envelope" />
             <span>Vault</span>
           </a>,
           <a key="3" href="#farms">
-            <i className="fa fa-fw fa-bell-o" />
+            <i className="fa fa-fw fa-bell" />
             <span>Farms</span>
           </a>,
           <a key="4" href="#howtobuy">
-            <i className="fa fa-fw fa-star-o" />
+            <i className="fa fa-fw fa-star" />
             <span>Trade</span>
           </a>,
           <a key="5" href="#tokenomics">
-            <i className="fa fa-fw fa-bar-chart-o" />
+            <i className="fa fa-fw fa-bar-chart" />
             <span>Tokenomics</span>
           </a>,
           <a key="6" href="#whitepaper">
-            <i className="fa fa-fw fa-newspaper-o" />
+            <i className="fa fa-fw fa-newspaper" />
             <span>Whitepaper</span>
           </a>,
           <a key="7" href="#roadmap">
-            <i className="fa fa-fw fa-comment-o" />
+            <i className="fa fa-fw fa-comment" />
             <span>Roadmap</span>
           </a>
         ];
@@ -115,27 +116,27 @@ class Demo extends Component {
             <span>Sidebar</span>
           </h2>,
           <a key="1" href="#pools">
-            <i className="fa fa-fw fa-envelope-o" />
+            <i className="fa fa-fw fa-envelope" />
             <span>Vault</span>
           </a>,
           <a key="2" href="#farms">
-            <i className="fa fa-fw fa-bell-o" />
+            <i className="fa fa-fw fa-bell" />
             <span>Farms</span>
           </a>,
           <a key="3" href="#howtobuy">
-            <i className="fa fa-fw fa-star-o" />
+            <i className="fa fa-fw fa-star" />
             <span>Trade</span>
           </a>,
           <a key="4" href="#tokenomics">
-            <i className="fa fa-fw fa-bar-chart-o" />
+            <i className="fa fa-fw fa-bar-chart" />
             <span>Tokenomics</span>
           </a>,
           <a key="5" href="#whitepaper">
-            <i className="fa fa-fw fa-newspaper-o" />
+            <i className="fa fa-fw fa-newspaper" />
             <span>Whitepaper</span>
           </a>,
           <a key="6" href="#roadmap">
-            <i className="fa fa-fw fa-comment-o" />
+            <i className="fa fa-fw fa-comment" />
             <span>Roadmap</span>
           </a>
         ];        
@@ -144,11 +145,46 @@ class Demo extends Component {
     return items;
   }
 
+  handleOnOpen (state) {
+    this.setState({ isWrapperOpen: true });    
+    console.log('state.isWrapperOpen', state.isWrapperOpen)
+  }
+
+  handleOnClose(state) {
+    console.log('state.isWrapperOpen', state.isWrapperOpen)
+    this.setState({ isWrapperOpen: false });    
+  }
+
+  isMenuOpen(state) {
+    console.log('state.isOpen', state.isOpen)
+    return state.isOpen;
+  }
+
+  // This keeps your state in sync with the opening/closing of the menu
+  // via the default means, e.g. clicking the X, pressing the ESC key etc.
+  handleStateChange (state) {
+    this.setState({menuOpen: state.isOpen})  
+  }
+  
+  // This can be used to close the menu, e.g. when a user clicks a menu item
+  closeMenu () {
+    this.setState({menuOpen: false})
+  }
+
+  // This can be used to toggle the menu, e.g. when using a custom icon
+  // Tip: You probably want to hide either/both default icons if using a custom icon
+  // See https://github.com/negomi/react-burger-menu#custom-icons
+  toggleMenu () {
+    this.setState(state => ({menuOpen: !state.menuOpen}))
+  }
+
   getMenu() {
     const Menu = BurgerMenu[this.state.currentMenu];
 
     const items = this.getItems();
     let jsx;
+
+    const { menuOpen } = this.state;
 
     if (this.state.side === 'right') {
       jsx = (
@@ -160,8 +196,23 @@ class Demo extends Component {
       );
     } else {
       jsx = (
-        <MenuWrap wait={20}>
-          <Menu id={this.state.currentMenu} pageWrapId={'page-wrap'} outerContainerId={'outer-container'} extension>
+        <MenuWrap 
+        wait={20}>
+          <Menu 
+          id={this.state.currentMenu}   
+          //onStateChange={ this.isMenuOpen.bind(this) }  
+          isOpen={this.state.menuOpen}
+          onStateChange={(state) => this.handleStateChange(state)}     
+          className={`bm-menu-wrap ${menuOpen ? "bm-menu-wrap-opened" : "bm-menu-wrap-closed"}`}
+          //className={ classNames({ 'bm-menu-wrap-opened': this.state.isOpen }) }
+          //className={ `${this.state.isOpen  ? "bm-menu-wrap-opened" : "bm-menu-wrap-closed"}` }
+          //className={isActive ? 'bm-menu-wrap': null}
+          //className={ "my-menu" }
+          onOpen={() => this.toggleMenu()} 
+          onClose={() => this.toggleMenu()}
+          pageWrapId={'page-wrap'} 
+          outerContainerId={'outer-container'} 
+          extension>
             {items}
           </Menu>
         </MenuWrap>
