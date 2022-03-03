@@ -203,7 +203,7 @@ class Demo extends Component {
           //onStateChange={ this.isMenuOpen.bind(this) }  
           isOpen={this.state.menuOpen}
           onStateChange={(state) => this.handleStateChange(state)}     
-          className={`bm-menu-wrap ${menuOpen ? "bm-menu-wrap-opened" : "bm-menu-wrap-closed"}`}
+          className={`${menuOpen ? "bm-menu-wrap-opened" : "bm-menu-wrap-closed"}`}
           //className={ classNames({ 'bm-menu-wrap-opened': this.state.isOpen }) }
           //className={ `${this.state.isOpen  ? "bm-menu-wrap-opened" : "bm-menu-wrap-closed"}` }
           //className={isActive ? 'bm-menu-wrap': null}
